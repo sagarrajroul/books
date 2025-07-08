@@ -139,3 +139,8 @@ SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,
     'DOC_EXPANSION': "none"
 }
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Required for WhiteNoise to serve files
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
